@@ -15,6 +15,9 @@ namespace Parlit.Models
         public string content { get; set; }
         [ForeignKey("User")]
         public int userID { get; set; }
+        public string URL { get; set; }
+        public string category { get; set; }
+        public bool hypostasis { get; set; }
 
     }
 }

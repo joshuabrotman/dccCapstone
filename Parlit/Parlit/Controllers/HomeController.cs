@@ -5,22 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Parlit.Data;
 using Parlit.Models;
 
 namespace Parlit.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _context;
+
+
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
+        
 
         public IActionResult Index()
         {
-            return View();
+            var posts = _context.Posts.ToList();
+            return View(posts);
         }
 
         public IActionResult Privacy()

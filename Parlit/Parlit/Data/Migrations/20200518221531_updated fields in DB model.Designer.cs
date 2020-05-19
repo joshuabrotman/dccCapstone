@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Parlit.Data;
 
 namespace Parlit.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200518221531_updated fields in DB model")]
+    partial class updatedfieldsinDBmodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,8 +50,8 @@ namespace Parlit.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "37039792-ffde-4cfa-8202-3475a772e974",
-                            ConcurrencyStamp = "f9f28b78-5055-4ce7-9f90-bea23046d7c0",
+                            Id = "0f91cab8-2292-40bb-b425-8711e3bc0450",
+                            ConcurrencyStamp = "e9bc484c-9fbf-45e4-82e7-fa58456de457",
                             Name = "User",
                             NormalizedName = "USER"
                         });

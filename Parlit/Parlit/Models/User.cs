@@ -13,6 +13,7 @@ namespace Parlit.Models
         [Key]
         public int userID {get; set;}
         public int userName { get; set; }
+        public int rank { get; set; }
 
     }
 }
