@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Parlit.Models.Submission>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                @foreach (var s in Model)
+                {
+                    <br>
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">@s.content</p>
+                            <h5 class="card-title"><a href="#" class="card-link">UpVote</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><a href="#" class="card-link">DownVote</a></h6>
+                            <a href="#" class="card-link">@s.timeSubmitted</a>
+                            <a href="#" class="card-link">User ID: @s.parlitorID</a>
+                            Total Votes:
+
+
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
